@@ -152,7 +152,7 @@ img{
 }               
 .nav-main{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .nav{
     display: flex;
@@ -223,6 +223,7 @@ img{
     margin-right: 24px;
 }
 .skills-item-title{
+    width: 264px;
     margin-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
@@ -337,7 +338,6 @@ img{
 }
 
 
-
         /*customers*/
 .customers{
     padding-top: 130px;
@@ -371,14 +371,16 @@ img{
     border-radius: 5%;
     color: var(--main-icon-color);
 }
-.customers-link:hover,
-.customers-link:focus{
+
+
+.customers-link:is(:hover, :focus) {
     border-color: var(--portfolio-button-bg-accent-color);
-    color: var(--portfolio-button-bg-accent-color);
 }
-.customers-icon {
-    fill: currentColor;
+.customers-link:is(:hover, :focus) .customer-icon {
+    fill: var(--portfolio-button-bg-accent-color);
 }
+
+
 
 
         /*footer*/
